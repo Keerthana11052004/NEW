@@ -53,8 +53,9 @@
         <h1>Welcome to the Application Hub</h1>
         <p>Please select an application to proceed:</p>
         <div class="links">
-            <a href="/cms">CMS</a>
-            <a href="/sap">SAP_MAILER</a>
+            {% for proj in projects %}
+                <a href={{proj.Web_Suffix}}>{{proj.Button_Text}}</a>
+            {% endfor %}
         </div>
     </div>
 </body>
